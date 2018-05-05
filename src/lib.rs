@@ -11,12 +11,36 @@ extern crate encoding_rs;
 
 use encoding_rs::*;
 
-pub fn encoding_for_code_page(_code_page: u16) -> Option<&'static Encoding> {
-	return Some(UTF_8);
+static CODE_PAGES_SORTED: [u16; 2] = [1252, 65001];
+
+static ENCODINGS_IN_CODE_PAGE_SORT: [&'static Encoding; 2] = [&WINDOWS_1252_INIT, &UTF_8_INIT];
+
+pub fn to_encoding(code_page: u16) -> Option<&'static Encoding> {
+    if let Ok(i) = CODE_PAGES_SORTED.binary_search(&code_page) {
+        Some(ENCODINGS_IN_CODE_PAGE_SORT[i])
+    } else {
+        None
+    }
 }
 
-pub fn code_page_for_encoding(_encoding: &'static Encoding) -> Option<u16> {
-	return Some(65001);
+pub fn to_encoding_no_replacement(code_page: u16) -> Option<&'static Encoding> {
+    let opt_encoding = to_encoding(code_page);
+    if opt_encoding == Some(REPLACEMENT) {
+        None
+    } else {
+        opt_encoding
+    }
+}
+
+pub fn from_encoding(encoding: &'static Encoding) -> Option<u16> {
+    if encoding == REPLACEMENT {
+        None
+    } else {
+        ENCODINGS_IN_CODE_PAGE_SORT
+            .iter()
+            .position(|&x| x == encoding)
+            .map(|i| CODE_PAGES_SORTED[i])
+    }
 }
 
 #[cfg(test)]
