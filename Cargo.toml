@@ -11,5 +11,8 @@ readme = "README.md"
 keywords = ["encoding", "codepage", "unicode", "windows", "win32"]
 categories = ["text-processing", "encoding"]
 
+[badges]
+travis-ci = { repository = "hsivonen/codepage" }
+
 [dependencies]
 encoding_rs = "0.8.13"
