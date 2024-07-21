@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/hsivonen/codepage.svg?branch=master)](https://travis-ci.org/hsivonen/codepage)
 [![crates.io](https://img.shields.io/crates/v/codepage.svg)](https://crates.io/crates/codepage)
 [![docs.rs](https://docs.rs/codepage/badge.svg)](https://docs.rs/codepage/)
 [![Apache 2 / MIT dual-licensed](https://img.shields.io/badge/license-Apache%202%20%2F%20MIT-blue.svg)](https://github.com/hsivonen/codepage/blob/master/COPYRIGHT)
