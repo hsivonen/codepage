@@ -7,7 +7,7 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-#![doc(html_root_url = "https://docs.rs/codepage/0.1.1")]
+#![no_std]
 
 //! Mapping between Windows [code page identifiers][1] and
 //! [encoding_rs][2] `Encoding`s.
