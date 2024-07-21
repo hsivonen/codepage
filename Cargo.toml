@@ -3,7 +3,7 @@ name = "codepage"
 version = "0.1.1"
 authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
 description = "Mapping between Windows code page numbers and encoding_rs character encodings"
-license = "MIT/Apache-2.0"
+license = "Apache-2.0 OR MIT"
 documentation = "https://docs.rs/codepage/"
 homepage = "https://docs.rs/codepage/"
 repository = "https://github.com/hsivonen/codepage"
@@ -13,3 +13,6 @@ categories = ["text-processing", "encoding"]
 
 [dependencies]
 encoding_rs = { version = "0.8.34", default-features = false }
+
+[badges.maintenance]
+status = "passively-maintained"
