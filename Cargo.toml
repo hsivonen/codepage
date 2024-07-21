@@ -15,4 +15,4 @@ categories = ["text-processing", "encoding"]
 travis-ci = { repository = "hsivonen/codepage" }
 
 [dependencies]
-encoding_rs = "0.8.13"
+encoding_rs = { version = "0.8.34", default-features = false }
