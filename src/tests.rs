@@ -59,8 +59,10 @@ fn test_to_encoding() {
     assert_eq!(to_encoding(28604), Some(ISO_8859_14));
     assert_eq!(to_encoding(28606), Some(ISO_8859_16));
     assert_eq!(to_encoding(951), Some(BIG5));
+    assert_eq!(to_encoding(10007), Some(X_MAC_CYRILLIC));
     assert_eq!(to_encoding(20936), Some(GBK));
     assert_eq!(to_encoding(20949), Some(EUC_KR));
+    assert_eq!(to_encoding(21010), Some(UTF_16LE));
     assert_eq!(to_encoding(28591), Some(WINDOWS_1252));
     assert_eq!(to_encoding(28599), Some(WINDOWS_1254));
     assert_eq!(to_encoding(28601), Some(WINDOWS_874));

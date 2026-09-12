@@ -72,15 +72,15 @@ pub fn from_encoding(encoding: &'static Encoding) -> Option<u16> {
 // Instead, please regenerate using generate-encoding-data.py
 
 /// Supported code page numbers in estimated order of usage frequency
-static CODE_PAGES: [u16; 51] = [
+static CODE_PAGES: [u16; 53] = [
     65001, 1200, 1252, 1251, 936, 932, 949, 1250, 1256, 1254, 950, 874, 1255, 1253, 1257, 1258,
     20932, 28592, 28605, 28597, 20866, 54936, 28595, 38598, 28594, 28596, 50221, 21866, 28603,
-    28593, 1201, 866, 28600, 28598, 10000, 10017, 28604, 28606, 951, 20936, 20949, 28591, 28599,
-    28601, 50220, 50222, 50225, 50227, 51936, 51949, 52936,
+    28593, 1201, 866, 28600, 28598, 10000, 10017, 28604, 28606, 951, 10007, 20936, 20949, 21010,
+    28591, 28599, 28601, 50220, 50222, 50225, 50227, 51936, 51949, 52936,
 ];
 
 /// Encodings corresponding to the code page numbers in the same order
-static ENCODINGS: [&'static Encoding; 51] = [
+static ENCODINGS: [&'static Encoding; 53] = [
     &UTF_8_INIT,
     &UTF_16LE_INIT,
     &WINDOWS_1252_INIT,
@@ -120,8 +120,10 @@ static ENCODINGS: [&'static Encoding; 51] = [
     &ISO_8859_14_INIT,
     &ISO_8859_16_INIT,
     &BIG5_INIT,
+    &X_MAC_CYRILLIC_INIT,
     &GBK_INIT,
     &EUC_KR_INIT,
+    &UTF_16LE_INIT,
     &WINDOWS_1252_INIT,
     &WINDOWS_1254_INIT,
     &WINDOWS_874_INIT,

@@ -55,6 +55,11 @@ You should not try to read anything more into Mozilla's name appearing.
 
 ## Release Notes
 
+### 0.1.3
+
+* Add 10007 for `x-mac-cyrillic`.
+* Add 21010 for `UTF-16LE`.
+
 ### 0.1.2
 
 * Make the crate `no_std`.
